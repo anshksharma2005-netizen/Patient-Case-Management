@@ -1,0 +1,30 @@
+CODESTORM V34 - AI ASSISTANT
+
+What was added:
+- New AI Assistant page for doctors, admins and patients.
+- Doctors/admins can optionally select an accessible patient and ask questions using that patient's permitted case context.
+- Patients can ask questions using only their own patient record as context.
+- No database tables were added or changed for the AI Assistant.
+- Existing appointments, referrals, messages, notifications, patient deletion and Registered Patients logic are unchanged.
+- Existing /api/ai-detect warning-sign checker remains available.
+
+OPTIONAL REAL AI CONNECTION
+1. Set an OpenAI API key in the environment before starting CODESTORM:
+   Windows CMD:
+     set OPENAI_API_KEY=your_api_key_here
+   PowerShell:
+     $env:OPENAI_API_KEY="your_api_key_here"
+   Linux/macOS:
+     export OPENAI_API_KEY="your_api_key_here"
+
+2. Optional model setting:
+   OPENAI_MODEL=gpt-6-luna
+
+3. Start CODESTORM normally.
+
+If OPENAI_API_KEY is not configured, the AI Assistant uses a safe local fallback so the project still runs without an external AI connection.
+
+IMPORTANT
+- Do not put an API key in app.js or index.html.
+- Do not commit an API key into the ZIP or source control.
+- The assistant is documentation/information support and is not a diagnosis or prescribing system.

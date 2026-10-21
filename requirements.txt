@@ -1,0 +1,4 @@
+# No third-party Python packages are required.
+# Python standard library only.
+
+python-dotenv>=1.0.0
